@@ -12,6 +12,7 @@ engine = setup_environment.get_database()
 try:
     con = engine.raw_connection()
     con.cursor().execute("SET SCHEMA '{}'".format('your_schema_name'))
+    print("Every thing is fine")
 except:
     pass
 

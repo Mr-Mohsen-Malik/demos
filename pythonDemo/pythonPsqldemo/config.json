@@ -1,4 +1,6 @@
-"PGHOS":"localhost",
-"PGDATABASE":"pythondemo",
-"PGUSER":"postgres",
-"PGPASSWORD":"mypass123"
+{
+	"PGHOST":"localhost",
+	"PGDATABASE":"pythondemo",
+	"PUSER":"postgres",
+	"PGPASSWORD":"mypass123"	
+}
