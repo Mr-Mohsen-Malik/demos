@@ -7,13 +7,26 @@ import pdb
 import pickle
 from setup import setup_environment
 
+
+sql = """INSERT INTO users(name)
+             VALUES('{}') RETURNING id;"""
+
+name = input("please enter you name to register: ")
 # Make PostgreSQL Connection
 engine = setup_environment.get_database()
 try:
     con = engine.raw_connection()
-    con.cursor().execute("SET SCHEMA '{}'".format('models'))
-except:
-    pass
+    curr = con.cursor()
+    curr.execute(sql, (name))
+    #print(curr.fetchone())
+    id = curr.fetchone()[0]
+    print("Congrats, you have been register.\n you id is",id)
+    curr.close()
+except (Exception) as error:
+	print(error)
+finally:
+	if con is not None:
+		con.close()
 
 
 # import psycopg2
