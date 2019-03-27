@@ -1,0 +1,10 @@
+
+<h2>My Dinosaurs</h2>
+<ul class="dinosaurs">
+  <li *ngFor="let dino of dinosaurs">
+  <a routerLink="/detail/{{dino.id}}">
+    <span class="badge">{{dino.id}}</span> {{dino.name}}
+  </a>
+  </li>
+</ul>
+<!-- <app-dinosaur-detail [dinosaur]="selectedDino"></app-dinosaur-detail> -->

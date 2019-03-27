@@ -1,0 +1,44 @@
+{{users?.email}}
+  <div *ngFor="let msg of messages">
+    {{msg.text}}
+  </div>
+<input [(ngModel)]="message" autocomplete="off" /><button (click)="sendMessage()">Send</button>
+
+
+
+<!-- <p>
+      REPTILEHAUS NG2 CHAT DEMO
+    </p>
+    <div *ngFor="let message of messages">
+      {{message.text}}
+    </div>
+    <input [(ngModel)]="message"  /><button (click)="sendMessage()">Send</button>  -->
+
+
+
+
+<!-- <script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+
+  $(function () {
+    var socket = io();
+    $('form').submit(function(){
+      socket.emit('chat message', $('#m').val());
+      $('#m').val('');
+      return false;
+    });
+  });
+
+  $(function () {
+    var socket = io();
+    $('form').submit(function(){
+      socket.emit('chat message', $('#m').val());
+      $('#m').val('');
+      return false;
+    });
+    socket.on('chat message', function(msg){
+      $('#messages').append($('<li>').text(msg));
+    });
+  });
+</script> -->

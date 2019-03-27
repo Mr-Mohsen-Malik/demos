@@ -1,0 +1,25 @@
+<!-- <h3>Top Dinosaurs</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let hero of heroes" class="col-1-4"
+      routerLink="/detail/{{hero.id}}">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </a>
+</div> -->
+
+
+<h3>Top Dinosaurs</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let dino of dinosaurs" class="col-1-4" routerLink="/detail/{{dino.id}}">
+    <div class="module dino">
+      <h4>{{dino.name}}</h4>
+    </div>
+  </a>
+</div>
+<a *ngFor="let hero of heroes" class="col-1-4" routerLink="/detail/{{hero.id}}">
+</a>
+<app-dinosaur-search></app-dinosaur-search>
+
+<h2>Here are some links to help you start: </h2>
+<h2><a target="_blank" rel="noopener" href="http://www.jurassicworld.com/">Tour of J-W </a></h2>

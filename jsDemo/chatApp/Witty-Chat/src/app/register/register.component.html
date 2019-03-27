@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="../../assets/form.css">
+
+<div class="row">
+    <div class="col-xs-4">
+    </div>
+
+    <div class="col-xs-4">
+        <h1>
+            Welcome to Witty Chat!
+        </h1>
+        <img width="150" alt="App Logo" src="../../assets/images/app-icon/appIcon.jpeg">
+        <p>Register.</p>
+        <div [hidden]=ack class="alert alert-success">
+            <p>Please go to your inbox verify your email.</p>
+        </div>
+        <form (ngSubmit)="register()" #loginForm="ngForm">
+            <div class="form-group">
+                <input placeholder="Name" type="text" class="form-control" required id="name" required [(ngModel)]="user.name" name="name"
+                    #name="ngModel">
+                <div [hidden]="name.pristine || name.valid " class="alert alert-danger">
+                    Name is required
+                </div>
+            </div>
+            <div class="form-group">
+                <input placeholder="Email" type="email" class="form-control" required id="email" required [(ngModel)]="user.email" name="email"
+                    #email="ngModel">
+                <div [hidden]="email.pristine || email.valid " class="alert alert-danger">
+                    Email is required
+                </div>
+                <div [hidden]=submitted class="alert alert-danger">
+                    Email is already taken.
+                </div>
+            </div>
+            <div class="form-group">
+                <input placeholder="Password" type="password" class="form-control" required minlength="6" id="password" required [(ngModel)]="user.password"
+                    name="password" #password="ngModel">
+                <div [hidden]=" password.pristine || password.valid" class="alert alert-danger">
+                    Atleast 6 words Password is required
+                </div>
+            </div>
+            <!-- <div class="form-group">
+                <input placeholder="verifyPassword" type="password" class="form-control" required minlength="6" id="verifypassword" required
+                    name="verifypassword">
+                <div *ngIf="password === verifypassword" class="alert alert-danger">
+                    wring
+                </div>
+            </div> -->
+            <div [hidden]="name.invalid || email.invalid || password.invalid">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+        <nav>
+            <a routerLink="/login">Login</a>
+        </nav>
+    </div>
+    <div class="col-xs-4">
+    </div>
+</div>

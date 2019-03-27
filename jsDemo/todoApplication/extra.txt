@@ -1,0 +1,32 @@
+var count = 1;
+var table = "Your table";
+$('#add').click(function addRow(){
+  var model = $('#Model').val();
+  var size = $('#Size').val();
+  var resolution = $('#Resolution').val();
+  var backlight = $('#Backlight').val();
+  var pins = $('#Pins').val();
+  var touch = $('#Touch').val();
+  $('#screens').append("<tr id='row"+count+"'><td>"+count+"</td><td id 
+  ='model"+count+"'>"+model+"</td><td id ='sizes"+count+"'>"+size+"</td><td 
+  id 
+  ='resolution"+count+"'>"+resolution+"</td><td id 
+  ='backlight"+count+"'>"+backlight+"</td><td id ='pins"+count+"'>"+pins+"
+  </td><td id ='touch"+count+"'>"+touch+"</td>");
+  var key = "table"+count;
+  count++;
+});
+$('#remove').click(function removeRow(){
+  var row = $('#row').val();
+  $('table#screens tr#row'+row).remove();
+});
+$('#save').click(function save(){
+  var table = $('#screens').html;
+  localStorage.setItem("Table", table);
+  alert('yo');
+});
+$('#open').click(function open(){
+  $('#screens').html =  localStorage.getItem("Table");
+  alert('yo');
+});
+});

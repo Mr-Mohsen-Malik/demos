@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CURD
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="./index.css"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>CURD Operations</h1>
+		</div>
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<table class="table table-bordered table-hover" id="tab_logic">
+					<thead>
+						<tr>
+							<th class="text-center">
+								#
+							</th>
+							<th class="text-center">
+								Name
+							</th>
+							<th class="text-center">
+								Email
+							</th>
+							<th class="text-center">
+								Address
+							</th>
+							<th class="text-center">
+								Mobile
+							</th>
+							<th class="text-center">
+								--
+							</th>
+						</tr>
+					</thead>
+					<tbody id='showRows'>
+						<tr id='addr0'>
+							<td>
+								0
+							</td>
+							<td>
+								<input type="text" id='name0' placeholder='Name' class="form-control" />
+							</td>
+							<td>
+								<input type="text" id='email0' placeholder='Email' class="form-control" />
+							</td>
+							<td>
+								<input type="text" id='address0' placeholder='Address' class="form-control" />
+							</td>
+							<td>
+								<input type="text" id='mobile0' placeholder='Mobile' class="form-control" />
+							</td>
+							<td>
+								<div class="btn-group-vertical">
+									<button id="add_row" value="add" name='add0' type="button" class="btn btn-success btn-sm">
+										<span class="glyphicon glyphicon-plus"></span>Add</button>
+							</td>
+						</tr>
+						<tr id='addr1'></tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+		<script src="./index.js"></script>
+		<script src="./validate.js"></script>
+</body>
+
+</html>

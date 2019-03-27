@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="todo.css" ></script>
+  <style>
+
+}
+</style>
+</head>
+<body>
+
+  <div class="container-fluid">                                                                                             
+    <div class="row">
+      <div class="col-sm-12" id="headr"><h1><b>ToDo Application</b></h1></div>
+    </div>
+    <div class="row content">
+      <div class="col-sm-3 sidenav">
+        <ul class="nav nav-pills nav-stacked">
+          <li><button id="btn_inbox"><span class="glyphicon glyphicon-inbox"></span>Inbox<span class="badge" id="tot"></span></button></li>
+          <li><button id="btn_today"><span class="glyphicon glyphicon-calendar"></span> Today</button></li>
+          <li><button id="btn_7days"><span class="glyphicon glyphicon-calendar"></span> Next 7 days</button></li>
+          <li><a href="#" id="addPro" class="a a-info" style="margin-top:40px; "><span class="glyphicon glyphicon-plus"></span> Add Project</a></li>
+        </ul><br>    
+      </div>
+
+      <div class="col-sm-5"> 
+        <br><br>  
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-search"></i></span>
+            <input id="input_search" type="text" class="form-control" placeholder="Enter Keyword For Search..">
+          </div>   
+          <br><br><br>
+
+          <a href="#" id="addTask" class="a a-info" ><span class="glyphicon glyphicon-plus"></span> Add Task</a><br>
+          <div class="row">
+            <div class="col-sm-6">
+              <input id="input_event" type="text" class="form-control" placeholder="Enter Event">
+            </div>
+            <div class="col-sm-4">
+              <input id="input_date" type="date" class="form-control" >
+            </div>
+            <div class="col-sm-2">
+              <button id="btn_add" class="btn btn-success" type="button">Add</button>
+            </div>
+          </div>
+
+          <br>
+          <form role="form">
+            <div class="col-sm-10">
+              <table id="myTable" class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Mark</th>
+                    <th>Task</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+
+              </table>
+              <button id="btn_remove" class="btn btn-info">Remove</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer class="container-fluids">
+        <p>Copyright@Wittybrains</p>
+      </footer>
+    </div>
+    <script type="text/javascript" src="todoApp2.js" ></script>
+  </body>
+  </html>

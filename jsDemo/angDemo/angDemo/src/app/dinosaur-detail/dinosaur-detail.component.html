@@ -1,0 +1,19 @@
+
+<div *ngIf="dinosaur">
+  <h2>{{dinosaur.name   | uppercase }} Details</h2>
+  
+  <div><img src = '{{dinosaur.image}}'></div>
+
+  <div><span>ID: </span>{{dinosaur.id}}</div>
+
+  <div><span>Info: </span>{{dinosaur.info}}</div>
+
+  <div><span>Name: </span>{{dinosaur.name}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="dinosaur.name" placeholder="name">
+    </label>
+  </div>
+</div>
+<button (click)="goBack()">Back</button>
+<!-- <button (click)="save()">save</button> -->

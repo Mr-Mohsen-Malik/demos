@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AMS
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../utils/response.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Welcome to the Alert Message Sender (AMS) </h1>
+  <button type="button" id="btn_show" class="btn btn-info" style=" float: left;margin-right: 34px;margin-left: 30px;">Users</button>
+  <button type="button" id="btn_send" class="btn btn-info" style="float: left;">Alerts</button>
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Current available Users</h3>
+     <table class="table" id="showUsers">
+    
+     </table>
+     
+      
+    </div>
+    <div class="col-sm-6">
+      <h3>Sending alert to Users</h3>
+      <table id ="showAlerts" class="table">
+      </table>
+      
+    </div>
+  </div>
+</div>
+<script src="./index.js"></script>
+</body>
+</html>

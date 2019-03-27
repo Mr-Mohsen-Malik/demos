@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="../../assets/form.css">
+<div class="row">
+
+    <div class="col-xs-4">
+    </div>
+    <div class="col-xs-4">
+        <h1>
+            Welcome to Witty Chat!
+        </h1>
+        <img width="150" alt="App Logo" src="../../assets/images/app-icon/appIcon.jpeg">
+        <p>Login</p>
+        <form (ngSubmit)="login()" #loginForm="ngForm">
+            <div [hidden]=submitted class="alert alert-danger">
+                email/password is wrong please try again
+            </div>
+            <div class="form-group">
+                <input placeholder="Email" type="email" class="form-control" required id="email" required [(ngModel)]="user.email" name="email"
+                    #email="ngModel">
+                <div [hidden]="email.pristine || email.valid " class="alert alert-danger">
+                    Email is required
+                </div>
+            </div>
+            <div class="form-group">
+                <input placeholder="Password" type="password" class="form-control" required id="password" required [(ngModel)]="user.password"
+                    name="password" #password="ngModel">
+                <div [hidden]=" password.pristine || password.valid" class="alert alert-danger">
+                    Password is required
+                </div>
+            </div>
+            <div [hidden]="!loginForm.form.valid ">
+                <button type="submit" (click)="login()" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+        <nav>
+        <a routerLink="/register" >Register</a>
+        </nav>
+    </div>
+    <div class="col-xs-4">
+    </div>
+</div>

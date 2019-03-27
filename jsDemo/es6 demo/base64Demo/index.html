@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Base64 Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#download").click(function () {
+                $.get("http://localhost:4000/pdf/getPdf", function (pdf, status) {
+
+                    var dlnk = document.createElement('a');
+                    dlnk.href = 'data:application/octet-stream;base64,' + pdf;
+                    dlnk.download = 'output.pdf';
+                    dlnk.click();
+
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Pdf File</h2>
+        <button type="button" id="download" class="btn">Download</button>
+    </div>
+</body>
+
+</html>

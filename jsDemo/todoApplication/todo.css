@@ -1,0 +1,38 @@
+ul{
+	margin-top: 20px;
+}
+li{
+	padding: 10px;
+}
+
+
+.sidenav {
+	background-color: #f1f1f1;
+	padding-bottom: 21%;
+
+}
+
+#headr{
+	background-color: black;
+	text-align-last: center;
+	color: white;
+
+}
+
+
+footer {
+	
+	bottom: 0;
+	background-color: #555;
+	color: lightgray;
+	font-size: 12px;
+	height:17px;
+	text-align: center;
+	margin-top: 10px;
+	width: 100%;
+	
+}
+
+@media screen and (max-width: 767px) {
+	
+	.row.content {height: auto;}
